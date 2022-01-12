@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Книги</h3>
+{% for i in book %}
+<h3> Название: {{i.name}}</h3>
+
+<h3>Авторы: {{ i.author.name }} <br></h3>
+
+<h3>Жанры: {% for a in i.genres.all %}
+    {{ a.name }} |
+    {% endfor %}</h3>
+
+<h3>Цена: {{i.price}}</h3> <br>
+{% endfor %}
+
+</body>
+</html>
